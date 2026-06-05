@@ -1,0 +1,516 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap');
+
+/* ===== STEP 2: COLOR SCHEME ===== */
+/* CSS Variables - Seattle Emerald & Blue Palette */
+:root {
+    --primary-emerald: #2D9B83;
+    --dark-emerald: #1F7A68;
+    --light-emerald: #5DBFA3;
+    --teal-blue: #4FB8C4;
+    --sky-blue: #87CEEB;
+    --ocean-gray: #6B8E99;
+    --light-gray: #F5F7F9;
+    --medium-gray: #E8ECEF;
+    --dark-gray: #3D4E56;
+    --forest-green: #3A9D7F;
+    --white: #FFFFFF;
+    --text-dark: #2C3E50;
+}
+
+/* ===== GLOBAL RESET AND BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-gray);
+}
+
+/* ===== STEP 3: TYPOGRAPHY ===== */
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--dark-emerald);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-emerald);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--dark-emerald);
+}
+
+/* ===== STEP 4: NAVIGATION BAR STYLING ===== */
+/* ===== MILESTONE 3: FLEXBOX FOR HEADER ===== */
+header {
+    background-color: var(--primary-emerald);
+    color: var(--white);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li {
+    /* No need for inline-block with flexbox */
+}
+
+nav ul li a {
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--dark-emerald);
+    transform: translateY(-2px);
+}
+
+/* ===== STEP 5: CONTENT SECTIONS STYLING ===== */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    background-color: var(--white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Home Page - Welcome Section */
+.Welcome-Section {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    color: var(--white);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Welcome-Section iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100%;
+    min-width: 177.77vh;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+    border: none;
+}
+
+/* Hide YouTube controls completely */
+.Welcome-Section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: transparent;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.Welcome-Section h2 {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    font-size: 4rem;
+    margin: 0;
+    padding: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-weight: 800;
+}
+
+.Welcome-Section img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Home Page Information Section */
+.Home-Page-Information {
+    text-align: center;
+    padding: 2.5rem 2rem;
+}
+
+.Home-Page-Information h2 {
+    color: var(--primary-emerald);
+    margin-bottom: 1rem;
+}
+
+.Home-Page-Information img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== STEP 6: IMAGES AND CARDS STYLING ===== */
+
+/* Attractions Page - Cards */
+/* ===== MILESTONE 3: FLEXBOX FOR ATTRACTIONS ===== */
+.attractions-container {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.attraction-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 280px;
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.25);
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.attraction-info {
+    padding: 1.5rem;
+}
+
+.attraction-info h2 {
+    color: var(--primary-emerald);
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.attraction-info p {
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.attraction-info strong {
+    color: var(--dark-emerald);
+}
+
+.attraction-info a {
+    display: inline-block;
+    background-color: var(--primary-emerald);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.attraction-info a:hover {
+    background-color: var(--dark-emerald);
+    transform: translateY(-2px);
+}
+
+/* Photo Gallery */
+.gallery-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.gallery-intro h2 {
+    color: var(--primary-emerald);
+}
+
+/* ===== MILESTONE 3: FLEXBOX FOR PHOTO GALLERY ===== */
+.photo-gallery {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(25% - 1.5rem);
+    min-width: 200px;
+    aspect-ratio: 1 / 1;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.brief-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    color: var(--white);
+    padding: 1.5rem 1rem 1rem;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.detailed-info {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-top: 3px solid var(--primary-emerald);
+}
+
+.detailed-info h3 {
+    color: var(--primary-emerald);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+/* Food Guide Page */
+.food-intro {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-emerald) 0%, var(--teal-blue) 100%);
+    color: var(--white);
+    padding: 2.5rem 2rem;
+}
+
+.food-intro h2 {
+    color: var(--white);
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.food-intro p {
+    color: var(--white);
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Personal Favorites Section */
+/* ===== MILESTONE 3: FLEXBOX FOR FOOD CARDS ===== */
+.favorite-spots {
+    background-color: var(--sky-blue);
+    padding: 2.5rem 2rem;
+}
+
+.favorite-spots h2 {
+    text-align: center;
+    color: var(--dark-emerald);
+    margin-bottom: 0.5rem;
+}
+
+.favorite-spots > p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: var(--dark-gray);
+}
+
+.favorites-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.favorites-container .food-card {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 280px;
+    margin-bottom: 0;
+}
+
+.food-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--primary-emerald);
+}
+
+.food-card h3 {
+    color: var(--primary-emerald);
+    margin-bottom: 0.75rem;
+}
+
+.recommendations {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--light-gray);
+    border-radius: 4px;
+}
+
+.recommendations h4 {
+    color: var(--dark-emerald);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.recommendations ul {
+    list-style-position: inside;
+    margin-left: 0.5rem;
+}
+
+.recommendations li {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.recommendations strong {
+    color: var(--primary-emerald);
+}
+
+/* Neighborhood Food Section */
+.neighborhood-food {
+    padding: 2.5rem 2rem;
+}
+
+.neighborhood-food h2 {
+    text-align: center;
+    color: var(--primary-emerald);
+    margin-bottom: 0.75rem;
+}
+
+.neighborhood-food > p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--ocean-gray);
+    font-size: 1.05rem;
+}
+
+.neighborhood-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border: 2px solid var(--primary-emerald);
+    transition: all 0.3s ease;
+}
+
+.neighborhood-card h3 {
+    color: var(--primary-emerald);
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+}
+
+.neighborhood-card > p {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.food-spots-list {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--medium-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.food-spot {
+    background-color: var(--light-gray);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--forest-green);
+}
+
+.food-spot h4 {
+    color: var(--dark-emerald);
+    margin-bottom: 0.5rem;
+}
+
+.food-spot p {
+    color: var(--text-dark);
+    margin-bottom: 0;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
