@@ -27,7 +27,7 @@ Estimated time spent: **8** hours spent in total
 
 - [X] **Guide Page** *(build one guide page of the type you choose below)*
   - [X] A separate page that is *one* of the following: a Food Guide, an Accommodations Guide, *or* an Upcoming Local Events Guide.
-  - [ X At least three entries thematic to your choice that provide a:
+  - [X] At least three entries thematic to your choice that provide a:
     - [X] Title
     - [X] Address
     - [X] Description
