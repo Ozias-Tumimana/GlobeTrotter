@@ -29,7 +29,7 @@ Deployed Application (optional): [Globetrotter Deployed Site](ADD_LINK_HERE)
     - E.g. same font, image size, title size, etc. 
   - [X] Content arranged with Flexbox for consistency and responsiveness.
 
-- [ ] **Guide Page** *(build one guide page of the type you choose below)*
+- [X] **Guide Page** *(build one guide page of the type you choose below)*
   - [X] A separate page that is *one* of the following: a Food Guide, an Accommodations Guide, *or* an Upcoming Local Events Guide.
   - [ X At least three entries thematic to your choice that provide a:
     - [X] Title
