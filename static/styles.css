@@ -76,7 +76,7 @@ a:hover {
 header {
     background-color: var(--primary-emerald);
     color: var(--white);
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
@@ -85,8 +85,8 @@ header {
 
 header h1 {
     color: var(--white);
-    margin-bottom: 1rem;
-    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.75rem;
     text-align: center;
 }
 
@@ -105,7 +105,7 @@ nav ul li {
 nav ul li a {
     color: var(--white);
     font-weight: 600;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 4px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -136,7 +136,8 @@ section {
     text-align: center;
     padding: 0;
     color: var(--white);
-    min-height: 500px;
+    min-height: 650px;
+    height: 650px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,23 +149,36 @@ section {
     top: 50%;
     left: 50%;
     width: 100vw;
-    height: 56.25vw;
-    min-height: 100%;
-    min-width: 177.77vh;
-    transform: translate(-50%, -50%);
+    height: 100vh;
+    min-height: 650px;
+    min-width: 100%;
+    transform: translate(-50%, -50%) scale(1.5);
     z-index: 1;
     pointer-events: none;
     border: none;
 }
 
-/* Hide YouTube controls completely */
+/* Hide YouTube controls completely - covers bottom controls */
 .Welcome-Section::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 80px;
+    height: 100px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Overlay to hide controls immediately on page load */
+.Welcome-Section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: transparent;
     z-index: 2;
     pointer-events: none;
@@ -198,16 +212,25 @@ section {
 
 .Home-Page-Information h2 {
     color: var(--primary-emerald);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .Home-Page-Information img {
     width: 100%;
-    max-width: 700px;
+    max-width: 900px;
     height: auto;
     border-radius: 8px;
     margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Home-Page-Information p {
+    line-height: 2;
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 /* ===== STEP 6: IMAGES AND CARDS STYLING ===== */
@@ -368,7 +391,7 @@ section {
 /* Personal Favorites Section */
 /* ===== MILESTONE 3: FLEXBOX FOR FOOD CARDS ===== */
 .favorite-spots {
-    background-color: var(--sky-blue);
+    background-color: var(--light-emerald);
     padding: 2.5rem 2rem;
 }
 
@@ -404,6 +427,17 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-left: 4px solid var(--primary-emerald);
+}
+
+.food-card img {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .food-card h3 {
@@ -466,6 +500,26 @@ section {
 }
 
 .neighborhood-card h3 {
+    text-align: center;
+}
+
+.neighborhood-card > p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.neighborhood-card img {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    margin: 1rem auto 1.5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.neighborhood-card h3 {
     color: var(--primary-emerald);
     margin-bottom: 0.5rem;
     font-size: 1.75rem;
@@ -510,7 +564,237 @@ img {
     height: auto;
 }
 
+/* Footer Styling */
+footer {
+    background-color: var(--primary-emerald);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Mobile Devices (320px - 767px) */
+@media (max-width: 767px) {
+    /* Navigation adjustments */
+    header {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    nav ul li a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    /* Main content */
+    main {
+        margin: 1rem auto;
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Home - Welcome Section with Video */
+    .Welcome-Section {
+        min-height: 350px;
+        height: 350px;
+    }
+
+    .Welcome-Section iframe {
+        min-height: 350px;
+    }
+
+    .Welcome-Section h2 {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    /* Home - Information Section */
+    .Home-Page-Information {
+        padding: 1.5rem 1rem;
+    }
+
+    .Home-Page-Information img {
+        max-width: 100%;
+    }
+
+    /* Typography adjustments */
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Top Attractions - Single column */
+    .attractions-container {
+        gap: 1.5rem;
+    }
+
+    .attraction-card {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+    .attraction-card img {
+        height: 200px;
+    }
+
+    .attraction-info {
+        padding: 1rem;
+    }
+
+    /* Photo Gallery - Single column */
+    .photo-gallery {
+        gap: 1rem;
+    }
+
+    .gallery-item {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+    .brief-description {
+        font-size: 1rem;
+        padding: 1rem 0.75rem 0.75rem;
+    }
+
+    /* Food Guide adjustments */
+    .food-intro {
+        padding: 1.5rem 1rem;
+    }
+
+    .food-intro h2 {
+        font-size: 1.75rem;
+    }
+
+    .food-intro p {
+        font-size: 1rem;
+    }
+
+    .favorite-spots {
+        padding: 1.5rem 1rem;
+    }
+
+    .favorites-container {
+        gap: 1rem;
+    }
+
+    .favorites-container .food-card {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+    .food-card {
+        padding: 1rem;
+    }
+
+    .neighborhood-food {
+        padding: 1.5rem 1rem;
+    }
+
+    .neighborhood-card {
+        padding: 1rem;
+    }
+}
+
+/* Tablet Devices (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Navigation */
+    header {
+        padding: 1.25rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    /* Main content */
+    main {
+        padding: 0 1.5rem;
+    }
+
+    /* Home - Welcome Section with Video */
+    .Welcome-Section {
+        min-height: 450px;
+        height: 450px;
+    }
+
+    .Welcome-Section iframe {
+        min-height: 450px;
+    }
+
+    .Welcome-Section h2 {
+        font-size: 3rem;
+    }
+
+    /* Photo Gallery - 2 columns */
+    .photo-gallery {
+        gap: 1.25rem;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(50% - 1rem);
+        min-width: calc(50% - 1rem);
+    }
+
+    /* Top Attractions - 2 columns (already handled by default flex) */
+    .attractions-container {
+        gap: 1.5rem;
+    }
+
+    .attraction-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+
+    /* Food Guide - 2 columns for favorites */
+    .favorites-container .food-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+/* Desktop Devices (1024px and above) */
+@media (min-width: 1024px) {
+    /* Photo Gallery - 4 columns (max) */
+    .gallery-item {
+        flex: 1 1 calc(25% - 1.5rem);
+    }
+
+    /* Top Attractions - 2 columns */
+    .attraction-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+
+    /* Food Guide - 2 columns for favorites */
+    .favorites-container .food-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
 }

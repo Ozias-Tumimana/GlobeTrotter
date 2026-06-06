@@ -4,7 +4,7 @@ Location:
 Audience: 
     Tourist
 
-What I want vistors to feel or know: 
+What I want visitors to feel or know: 
     I want them to know the most popular places. how to get there, See fun pictures of it, be able to be informed in the culture of the place, feel excited about the prospect of visiting the place. I think it would be pretty cool to incorporate music somehow into this as a stretch goal too. 
 
 
@@ -37,4 +37,18 @@ Gallery
     I don't like the layout of this currently at all. I want the part introducing the gallary to be centered but I want it the actual images to start from left to right and be in square containers. I think two rows of four would be good for desktop. For mobile one at a time and it would scale down depending on the size of the screen from a max of four a row. I want these images to be two rows of four square cards with images. When you click on these images, they would pop out another card, shade out the background of the screen and give some lore of the place with a wider view of the image, along with the address.
 Attractions
     I like where things are here. We could try to make the titles of places centered but that may look weird. Try it out and see. 
+
+## Media Queries
+Three Device Sizes: 
+    -Mobile: min-width: 320px
+    -Tablet: min-width:768px
+    -Desktop: min-width: 1024px
+
+Major Changes: 
+    -Home: Video needs to adapt to match screen size while my text stays centered.  
+    -Top attractions:If my device cannot support the width of two cards I need to make sure the # of cards go down to one and that it scrolls column-wise.
+    -Photo Gallery: I need to be able to go from a maximum of 4 cards / card to two if necessary. 
+    -Food Guide: I need to make sure all my text condenses into a smaller screen and all my cards do too. 
+
+-There are no sections where the mobile experience should feel significantly different, it should all just be a bit downsized. 
 
