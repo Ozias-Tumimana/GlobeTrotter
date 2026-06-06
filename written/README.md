@@ -1,14 +1,10 @@
 # GlobeTrotter
 
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
-
 ## Unit Assignment: Globetrotter
 
-Submitted by: **NAME**
+Submitted by: **Ozias Tumimana**
 
-Estimated time spent: **#** hours spent in total
-
-Deployed Application (optional): [Globetrotter Deployed Site](ADD_LINK_HERE)
+Estimated time spent: **8** hours spent in total
 
 ### Application Features
 
@@ -87,9 +83,7 @@ Deployed Application (optional): [Globetrotter Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-`TODO://` Paste the **shareable link** to your animated app walkthrough below (replace `ADD_LOOM_LINK_HERE`). GitHub markdown won't render an embedded Loom player, so a plain link is what graders will use. Make sure the link is public and playable before submitting. (🚫 Remove this paragraph after adding your walkthrough link.)
-
-**Walkthrough video:** [Globetrotter Walkthrough](ADD_LOOM_LINK_HERE)
+**Walkthrough video:** [Globetrotter Walkthrough](https://www.loom.com/share/3a548079c6da45e08a8a51bbb02a5e35)
 
 ### Reflection
 
@@ -98,10 +92,12 @@ Deployed Application (optional): [Globetrotter Deployed Site](ADD_LINK_HERE)
 Yes, the topics in my lab helped prepare me for building this website. The most helpful thing in my opinion was the flexbox froggy which really helped me understand how to go about working with flexbox. 
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
+  
 If I had more time I would have added cool features that I didn't have time for. An example of this would have been a countdown to the world cup game in seattle and information about that in top attractions. 
   
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
+* 
 I think I did a good job of showing the features my project had. I think in the future I need to work on my nerves and presenting slowly while being sure of myself. 
 
 
@@ -110,7 +106,5 @@ I think I did a good job of showing the features my project had. I think in the 
 - None
 
 ### Shout out
-
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
 
 Shoutout Zainab, a peer from my cohort, for her advice in ideation. 
